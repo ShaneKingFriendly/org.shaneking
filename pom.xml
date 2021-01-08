@@ -13,8 +13,8 @@
   <version>0.241.1</version>
   <packaging>pom</packaging>
 
-  <name>shaneking.org maven projects</name>
-  <description>the parent of maven projects for shaneking.org</description>
+  <name>org.shaneking</name>
+  <description>ShaneKing Maven Projects</description>
   <url>https://github.com/ShaneKingOrg/org.shaneking</url>
   <inceptionYear>2011-2021</inceptionYear>
 
@@ -24,10 +24,8 @@
   </organization>
   <licenses>
     <license>
-      <name>Apache-2.0</name>
-      <url>https://opensource.org/licenses/Apache-2.0</url>
-      <distribution>repo</distribution>
-      <comments>ShaneKingOrg is released under Apache-2.0 License.</comments>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0</url>
     </license>
   </licenses>
   <developers>
@@ -81,7 +79,7 @@
   <scm>
     <connection>scm:git:git@github.com:ShaneKingOrg/org.shaneking.git</connection>
     <developerConnection>scm:git:git@github.com:ShaneKingOrg/org.shaneking.git</developerConnection>
-    <url>git@github.com:ShaneKingOrg/org.shaneking.git</url>
+    <url>https://github.com/ShaneKingOrg/org.shaneking</url>
   </scm>
   <issueManagement>
     <system>Github</system>
@@ -116,6 +114,10 @@
   <!-- mvn -N versions:set -DgenerateBackupPoms=false -DnewVersion=0.241.1 -->
   <!-- Unused : mvn -N versions:update-child-modules -->
   <modules>
+    <module>../org.shaneking.ling</module>
+    <module>../org.shaneking.roc</module>
+    <module>../org.shaneking.james</module>
+    <module>../org.shaneking.leon</module>
   </modules>
 
   <dependencyManagement>
