@@ -1,6 +1,7 @@
 <configuration>
   <property name="sklog.path" value="./logs"/>
-  <property name="sklog.pattern" value="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-5level] [%thread] [%logger:%line] - %msg%n"/>
+  <property name="sklog.prefix" value="org.shaneking"/>
+  <property name="sklog.pattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %thread %logger:%line - %msg%n"/>
   <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
     <encoder>
       <pattern>${sklog.pattern}</pattern>
@@ -12,12 +13,12 @@
       <pattern>${sklog.pattern}</pattern>
       <charset>UTF-8</charset>
     </encoder>
-    <file>${sklog.path}/org.shaneking.log</file>
+    <file>${sklog.path}/${sklog.prefix}.log</file>
     <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-      <fileNamePattern>${sklog.path}/org.shaneking-%d{yyyy-MM-dd}.%i.log</fileNamePattern><!-- Rolling Policy: By Date By Size -->
+      <fileNamePattern>${sklog.path}/${sklog.prefix}.%d{yyyy-MM-dd}.%i.log</fileNamePattern><!-- Rolling Policy: By Date By Size -->
       <maxFileSize>100MB</maxFileSize>
       <maxHistory>32</maxHistory><!-- Day -->
-      <totalSizeCap>5G</totalSizeCap>
+      <totalSizeCap>5GB</totalSizeCap>
     </rollingPolicy>
   </appender>
   <root level="info"><!-- >info -->
@@ -31,12 +32,12 @@
       <pattern>${sklog.pattern}</pattern>
       <charset>UTF-8</charset>
     </encoder>
-    <file>${sklog.path}/org.shaneking.xxx.log</file>
+    <file>${sklog.path}/${sklog.prefix}.xxx.log</file>
     <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-      <fileNamePattern>${sklog.path}/org.shaneking.xxx-%d{yyyy-MM-dd}.%i.log</fileNamePattern><!-- Rolling Policy: By Date By Size -->
+      <fileNamePattern>${sklog.path}/${sklog.prefix}.xxx.%d{yyyy-MM-dd}.%i.log</fileNamePattern><!-- Rolling Policy: By Date By Size -->
       <maxFileSize>100MB</maxFileSize>
       <maxHistory>32</maxHistory><!-- Day -->
-      <totalSizeCap>5G</totalSizeCap>
+      <totalSizeCap>5GB</totalSizeCap>
     </rollingPolicy>
   </appender>
   <logger name="org.shaneking.xxx" level="info" additifiltervity="false"><!-- additifiltervity=false : the org.shaneking.xxx log just output to this logger -->
@@ -49,17 +50,17 @@
       <pattern>${sklog.pattern}</pattern>
       <charset>UTF-8</charset>
     </encoder>
-    <file>${sklog.path}/org.shaneking__just_error.log</file>
+    <file>${sklog.path}/${sklog.prefix}.yyy.log</file>
     <filter class="ch.qos.logback.classic.filter.LevelFilter"><!-- Just Error Level, =error -->
       <level>error</level>
       <onMatch>ACCEPT</onMatch>
       <onMismatch>DENY</onMismatch>
     </filter>
     <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-      <fileNamePattern>${sklog.path}/org.shaneking__just_error-%d{yyyy-MM-dd}.%i.log</fileNamePattern><!-- Rolling Policy: By Date By Size -->
+      <fileNamePattern>${sklog.path}/${sklog.prefix}.yyy.%d{yyyy-MM-dd}.%i.log</fileNamePattern><!-- Rolling Policy: By Date By Size -->
       <maxFileSize>100MB</maxFileSize>
       <maxHistory>32</maxHistory><!-- Day -->
-      <totalSizeCap>5G</totalSizeCap>
+      <totalSizeCap>5GB</totalSizeCap>
     </rollingPolicy>
   </appender>
   <logger name="org.shaneking.yyy" level="warn"><!-- level=warn : >warn -->
