@@ -47,22 +47,6 @@
       <option name="Make" enabled="true"/>
     </method>
   </configuration>
-  <configuration default="false" name="ling-zero-test-jsqlparser" type="JUnit" factoryName="JUnit">
-    <module name="org.shaneking.ling.jsqlparser"/>
-    <extension name="coverage">
-      <pattern>
-        <option name="PATTERN" value="org.shaneking.ling.jsqlparser.*"/>
-        <option name="ENABLED" value="true"/>
-      </pattern>
-    </extension>
-    <option name="PACKAGE_NAME" value="sktest"/>
-    <option name="MAIN_CLASS_NAME" value=""/>
-    <option name="METHOD_NAME" value=""/>
-    <option name="TEST_OBJECT" value="package"/>
-    <method v="2">
-      <option name="Make" enabled="true"/>
-    </method>
-  </configuration>
   <configuration default="false" name="ling-zero-test-jackson-persistence" type="JUnit" factoryName="JUnit">
     <module name="org.shaneking.ling.persistence"/>
     <extension name="coverage">
@@ -84,6 +68,22 @@
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="org.shaneking.ling.rr.*"/>
+        <option name="ENABLED" value="true"/>
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="sktest"/>
+    <option name="MAIN_CLASS_NAME" value=""/>
+    <option name="METHOD_NAME" value=""/>
+    <option name="TEST_OBJECT" value="package"/>
+    <method v="2">
+      <option name="Make" enabled="true"/>
+    </method>
+  </configuration>
+  <configuration default="false" name="ling-zero-test-jsqlparser" type="JUnit" factoryName="JUnit">
+    <module name="org.shaneking.ling.jsqlparser"/>
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="org.shaneking.ling.jsqlparser.*"/>
         <option name="ENABLED" value="true"/>
       </pattern>
     </extension>
@@ -132,6 +132,22 @@
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="org.shaneking.roc.persistence.*"/>
+        <option name="ENABLED" value="true"/>
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="sktest"/>
+    <option name="MAIN_CLASS_NAME" value=""/>
+    <option name="METHOD_NAME" value=""/>
+    <option name="TEST_OBJECT" value="package"/>
+    <method v="2">
+      <option name="Make" enabled="true"/>
+    </method>
+  </configuration>
+  <configuration default="false" name="roc-test-persistence-rr" type="JUnit" factoryName="JUnit">
+    <module name="org.shaneking.roc.rr"/>
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="org.shaneking.roc.rr.*"/>
         <option name="ENABLED" value="true"/>
       </pattern>
     </extension>
