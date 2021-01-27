@@ -104,6 +104,7 @@
     <com.google.zxing_version>3.4.1</com.google.zxing_version>
     <commons-io_commons-io_version>2.8.0</commons-io_commons-io_version>
     <commons-net_commons-net_version>3.7.2</commons-net_commons-net_version>
+    <io.springfox_version>2.9.2</io.springfox_version>
     <!-- build plugins -->
     <org.jacoco_jacoco-maven-plugin_version>0.8.6</org.jacoco_jacoco-maven-plugin_version>
     <sh.tak.appbundler_appbundle-maven-plugin_version>1.2.0</sh.tak.appbundler_appbundle-maven-plugin_version><!-- g2048 -->
@@ -156,6 +157,16 @@
         <groupId>commons-net</groupId>
         <artifactId>commons-net</artifactId>
         <version>${commons-net_commons-net_version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger2</artifactId>
+        <version>${io.springfox_version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger-ui</artifactId>
+        <version>${io.springfox_version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
