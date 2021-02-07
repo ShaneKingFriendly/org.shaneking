@@ -10,7 +10,7 @@
 
   <groupId>org.shaneking</groupId>
   <artifactId>org.shaneking</artifactId>
-  <version>0.241.1</version>
+  <version>0.241.1.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>org.shaneking</name>
@@ -91,11 +91,12 @@
   </ciManagement>
 
   <distributionManagement>
-    <repository>
-      <id>oss</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-    </repository>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <url>http://nexus.shaneking.org/repository/maven-snapshots/</url>
+    </snapshotRepository>
   </distributionManagement>
+
   <properties>
     <!-- dependencies : updated 2021.1.7 -->
     <com.belerweb_pinyin4j_version>2.5.1</com.belerweb_pinyin4j_version>
@@ -108,12 +109,13 @@
     <io.springfox_version>2.9.2</io.springfox_version>
     <!-- build plugins -->
     <org.jacoco_jacoco-maven-plugin_version>0.8.6</org.jacoco_jacoco-maven-plugin_version>
+    <org.sonarsource.scanner.maven_sonar-maven-plugin_version>3.8.0.2131</org.sonarsource.scanner.maven_sonar-maven-plugin_version><!-- sonar:sonar -->
     <sh.tak.appbundler_appbundle-maven-plugin_version>1.2.0</sh.tak.appbundler_appbundle-maven-plugin_version><!-- g2048 -->
     <!-- profile plugins -->
     <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
   </properties>
 
-  <!-- mvn -N versions:set -DgenerateBackupPoms=false -DnewVersion=0.241.0 -->
+  <!-- mvn -N versions:set -DgenerateBackupPoms=false -DnewVersion=0.241.1.1-SNAPSHOT -->
   <!-- Unused : mvn -N versions:update-child-modules -->
   <modules>
     <module>../org.shaneking.ling</module>
@@ -196,7 +198,7 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
         </plugin>
-        <!--test:coverage-->
+        <!--coverage:https://howtoprogram.xyz/2017/09/17/integrate-junit-5-with-jacoco-and-sonarqube-in-maven-builds/-->
         <plugin>
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
@@ -205,22 +207,44 @@
             <includes>
               <include>org/shaneking/**/*</include>
             </includes>
+            <systemPropertyVariables>
+              <jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>
+            </systemPropertyVariables>
           </configuration>
           <executions>
             <execution>
-              <id>pre-test</id>
+              <id>prepare-agent</id>
               <goals>
                 <goal>prepare-agent</goal>
               </goals>
             </execution>
             <execution>
-              <id>post-test</id>
-              <phase>test</phase>
+              <id>report</id>
+              <phase>prepare-package</phase>
               <goals>
                 <goal>report</goal>
               </goals>
             </execution>
+            <execution>
+              <id>post-unit-test</id>
+              <phase>test</phase>
+              <goals>
+                <goal>report</goal>
+              </goals>
+              <configuration>
+                <!-- Sets the path to the file which contains the execution data. -->
+                <dataFile>target/jacoco.exec</dataFile>
+                <!-- Sets the output directory for the code coverage report. -->
+                <outputDirectory>target/jacoco-ut</outputDirectory>
+              </configuration>
+            </execution>
           </executions>
+        </plugin>
+        <!--sonar-->
+        <plugin>
+          <groupId>org.sonarsource.scanner.maven</groupId>
+          <artifactId>sonar-maven-plugin</artifactId>
+          <version>${org.sonarsource.scanner.maven_sonar-maven-plugin_version}</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -273,6 +297,12 @@
           </plugin>
         </plugins>
       </build>
+      <distributionManagement>
+        <repository>
+          <id>oss</id>
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+      </distributionManagement>
     </profile>
   </profiles>
 
