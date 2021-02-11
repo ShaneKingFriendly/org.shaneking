@@ -198,49 +198,28 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
         </plugin>
-        <!--coverage:https://howtoprogram.xyz/2017/09/17/integrate-junit-5-with-jacoco-and-sonarqube-in-maven-builds/-->
+        <!--coverage:https://blog.csdn.net/tyut_aa/article/details/107664463/-->
         <plugin>
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
           <version>${org.jacoco_jacoco-maven-plugin_version}</version>
-          <configuration>
-            <includes>
-              <include>org/shaneking/**/*</include>
-            </includes>
-            <systemPropertyVariables>
-              <jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>
-            </systemPropertyVariables>
-          </configuration>
           <executions>
             <execution>
-              <id>prepare-agent</id>
+              <id>default-prepare-agent</id>
               <goals>
                 <goal>prepare-agent</goal>
               </goals>
             </execution>
             <execution>
-              <id>report</id>
-              <phase>prepare-package</phase>
-              <goals>
-                <goal>report</goal>
-              </goals>
-            </execution>
-            <execution>
-              <id>post-unit-test</id>
+              <id>default-report</id>
               <phase>test</phase>
               <goals>
                 <goal>report</goal>
               </goals>
-              <configuration>
-                <!-- Sets the path to the file which contains the execution data. -->
-                <dataFile>target/jacoco.exec</dataFile>
-                <!-- Sets the output directory for the code coverage report. -->
-                <outputDirectory>target/jacoco-ut</outputDirectory>
-              </configuration>
             </execution>
           </executions>
         </plugin>
-        <!--sonar-->
+        <!--mvn sonar:sonar -Dsonar.host.url=http://sonar.shaneking.org -Dsonar.login=org.shaneking.*的Token-->
         <plugin>
           <groupId>org.sonarsource.scanner.maven</groupId>
           <artifactId>sonar-maven-plugin</artifactId>
