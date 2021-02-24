@@ -93,7 +93,7 @@
   <distributionManagement>
     <snapshotRepository>
       <id>snapshots</id>
-      <url>http://nexus.shaneking.org/repository/maven-snapshots/</url>
+      <url>https://nexus.shaneking.org/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 
