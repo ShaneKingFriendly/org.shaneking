@@ -90,13 +90,6 @@
     <url>https://travis-ci.org/ShaneKingOpen/org.shaneking</url>
   </ciManagement>
 
-  <distributionManagement>
-    <snapshotRepository>
-      <id>snapshots</id>
-      <url>https://nexus.shaneking.org/repository/maven-snapshots/</url>
-    </snapshotRepository>
-  </distributionManagement>
-
   <properties>
     <!-- dependencies : updated 2021.1.7 -->
     <com.belerweb_pinyin4j_version>2.5.1</com.belerweb_pinyin4j_version>
@@ -179,7 +172,6 @@
     </dependencies>
   </dependencyManagement>
   <!-- mvn clean install -->
-  <!-- mvn clean deploy -DskipTests -P release -Dgpg.passphrase=分享为shaneking在上海 -->
   <build>
     <pluginManagement>
       <plugins>
@@ -193,32 +185,6 @@
             <target>${java.version}</target>
           </configuration>
         </plugin>
-        <!--source-->
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-source-plugin</artifactId>
-          <executions>
-            <execution>
-              <id>attach-sources</id>
-              <goals>
-                <goal>jar</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-        <!--doc-->
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-javadoc-plugin</artifactId>
-          <executions>
-            <execution>
-              <id>attach-javadocs</id>
-              <goals>
-                <goal>jar</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
         <!--test-->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -231,7 +197,7 @@
           <version>${org.jacoco_jacoco-maven-plugin_version}</version>
           <executions>
             <execution>
-              <id>default-prepare-agent</id>
+              <id>default-prepare-agent</id><!--'build.pluginManagement.plugins.plugin[org.jacoco:jacoco-maven-plugin].executions.execution.id' must be unique but found duplicate execution with id default-->
               <goals>
                 <goal>prepare-agent</goal>
               </goals>
@@ -254,10 +220,11 @@
       </plugins>
     </pluginManagement>
   </build>
-  <!-- mvn clean deploy -P release -Dgpg.passphrase=分享为shaneking在上海 -->
   <profiles>
     <profile>
-      <id>release</id>
+      <!-- mvn clean deploy -P oss -Dgpg.passphrase=分享为shaneking在上海 -->
+      <!-- mvn clean deploy -DskipTests -P oss -Dgpg.passphrase=分享为shaneking在上海 -->
+      <id>oss</id>
       <build>
         <plugins>
           <!-- GPG:-Dgpg.passphrase=分享为shaneking在上海 -->
@@ -307,6 +274,16 @@
           <id>oss</id>
           <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
         </repository>
+        <!-- for travis-ci.org, need upload to oss
+        <snapshotRepository>
+          <id>nexus</id>
+          <url>https://nexus.shaneking.org/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        -->
+        <snapshotRepository>
+          <id>oss</id>
+          <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
       </distributionManagement>
     </profile>
   </profiles>
