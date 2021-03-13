@@ -15,7 +15,7 @@
 
   <name>org.shaneking</name>
   <description>ShaneKing Maven Projects</description>
-  <url>https://github.com/ShaneKingOpen/org.shaneking</url>
+  <url>https://github.com/ShaneKingFriendly/org.shaneking</url>
   <inceptionYear>2011-2021</inceptionYear>
 
   <organization>
@@ -79,15 +79,15 @@
   <scm>
     <connection>scm:git:git@github.com:ShaneKingOrg/org.shaneking.git</connection>
     <developerConnection>scm:git:git@github.com:ShaneKingOrg/org.shaneking.git</developerConnection>
-    <url>https://github.com/ShaneKingOpen/org.shaneking</url>
+    <url>https://github.com/ShaneKingFriendly/org.shaneking</url>
   </scm>
   <issueManagement>
     <system>Github</system>
-    <url>https://github.com/ShaneKingOpen/org.shaneking/issues</url>
+    <url>https://github.com/ShaneKingFriendly/org.shaneking/issues</url>
   </issueManagement>
   <ciManagement>
     <system>Travis-CI</system>
-    <url>https://travis-ci.org/ShaneKingOpen/org.shaneking</url>
+    <url>https://travis-ci.org/ShaneKingFriendly/org.shaneking</url>
   </ciManagement>
 
   <properties>
