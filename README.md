@@ -4,7 +4,8 @@ ShaneKing Java Library
 
 ## Special Getter/Setter Method Name Prefix
 
-- **gnn**: get not null
 - **gna**: get null able
-- **srv**: set return void
+- **gnn**: get not null
+- **sin**: set if null
 - **sro**: set return old
+- **srv**: set return void
