@@ -1,0 +1,17 @@
+{
+  "code": "-1",
+  "data": {
+    "pri": {
+      "ext": {
+        "userNo": "tstUserNo"
+      },
+      "obj": "{}"
+    },
+    "pub": {
+      "channelNo": "tstChannelNo",
+      "tenantNo": "tstTenantNo",
+      "tracingNo": "1618660611831_o5AdUU8AUMxx2wO6aB6"
+    }
+  },
+  "mesg": "RespException(super=org.shaneking.ling.rr.RespException: , resp=Resp(code=, data=Req(ctx=null, enc=null, pri=Pri(ext=Ext(jon=null, tbl=null, userNo=tstUserNo), obj={}, rtn=null), pub=Pub(channelNo=tstChannelNo, encoded=null, jon=null, tenantNo=tstTenantNo, tracingNo=1618660611831_o5AdUU8AUMxx2wO6aB6)), mesg=))"
+}
