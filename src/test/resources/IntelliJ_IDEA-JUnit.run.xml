@@ -127,6 +127,22 @@
       <option name="Make" enabled="true"/>
     </method>
   </configuration>
+  <configuration default="false" name="ling-zero-logback" type="JUnit" factoryName="JUnit">
+    <module name="org.shaneking.ling.logback"/>
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="org.shaneking.ling.logback.*"/>
+        <option name="ENABLED" value="true"/>
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="sktest"/>
+    <option name="MAIN_CLASS_NAME" value=""/>
+    <option name="METHOD_NAME" value=""/>
+    <option name="TEST_OBJECT" value="package"/>
+    <method v="2">
+      <option name="Make" enabled="true"/>
+    </method>
+  </configuration>
   <configuration default="false" name="ling-zero-rr" type="JUnit" factoryName="JUnit">
     <module name="org.shaneking.ling.rr"/>
     <extension name="coverage">
@@ -191,7 +207,7 @@
       <option name="Make" enabled="true"/>
     </method>
   </configuration>
-  <configuration default="false" name="roc-persistence(ling.cache)" type="JUnit" factoryName="JUnit">
+  <configuration default="false" name="roc-cache-persistence" type="JUnit" factoryName="JUnit">
     <module name="org.shaneking.roc.persistence"/>
     <extension name="coverage">
       <pattern>
@@ -207,7 +223,7 @@
       <option name="Make" enabled="true"/>
     </method>
   </configuration>
-  <configuration default="false" name="roc-persistence-hello" type="JUnit" factoryName="JUnit">
+  <configuration default="false" name="roc-cache-persistence-hello" type="JUnit" factoryName="JUnit">
     <module name="org.shaneking.roc.persistence.hello"/>
     <extension name="coverage">
       <pattern>
@@ -223,7 +239,7 @@
       <option name="Make" enabled="true"/>
     </method>
   </configuration>
-  <configuration default="false" name="roc-persistence-rr[roc.jackson]" type="JUnit" factoryName="JUnit">
+  <configuration default="false" name="roc-cache-persistence-rr[roc.jackson]" type="JUnit" factoryName="JUnit">
     <module name="org.shaneking.roc.rr"/>
     <extension name="coverage">
       <pattern>
