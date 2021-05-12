@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="ling-struct" type="JUnit" factoryName="JUnit">
+  <configuration default="false" name="ling-struct[lombok]" type="JUnit" factoryName="JUnit">
     <module name="org.shaneking.ling.struct"/>
     <extension name="coverage">
       <pattern>
@@ -15,7 +15,7 @@
       <option name="Make" enabled="true"/>
     </method>
   </configuration>
-  <configuration default="false" name="ling-zero" type="JUnit" factoryName="JUnit">
+  <configuration default="false" name="ling-zero[lombok,slf4j-api]" type="JUnit" factoryName="JUnit">
     <module name="org.shaneking.ling.zero"/>
     <extension name="coverage">
       <pattern>
@@ -95,7 +95,7 @@
       <option name="Make" enabled="true"/>
     </method>
   </configuration>
-  <configuration default="false" name="ling-zero-jackson-persistence" type="JUnit" factoryName="JUnit">
+  <configuration default="false" name="ling-zero-jackson-persistence[myexcel]" type="JUnit" factoryName="JUnit">
     <module name="org.shaneking.ling.persistence"/>
     <extension name="coverage">
       <pattern>
@@ -175,7 +175,7 @@
       <option name="Make" enabled="true"/>
     </method>
   </configuration>
-  <configuration default="false" name="roc-cache" type="JUnit" factoryName="JUnit">
+  <configuration default="false" name="roc-cache[spring-tx,{sbs}-aop,caffeine]" type="JUnit" factoryName="JUnit">
     <module name="org.shaneking.roc.cache"/>
     <extension name="coverage">
       <pattern>
@@ -191,23 +191,7 @@
       <option name="Make" enabled="true"/>
     </method>
   </configuration>
-  <configuration default="false" name="roc-jackson" type="JUnit" factoryName="JUnit">
-    <module name="org.shaneking.roc.jackson"/>
-    <extension name="coverage">
-      <pattern>
-        <option name="PATTERN" value="org.shaneking.roc.jackson.*"/>
-        <option name="ENABLED" value="true"/>
-      </pattern>
-    </extension>
-    <option name="PACKAGE_NAME" value="sktest"/>
-    <option name="MAIN_CLASS_NAME" value=""/>
-    <option name="METHOD_NAME" value=""/>
-    <option name="TEST_OBJECT" value="package"/>
-    <method v="2">
-      <option name="Make" enabled="true"/>
-    </method>
-  </configuration>
-  <configuration default="false" name="roc-cache-persistence" type="JUnit" factoryName="JUnit">
+  <configuration default="false" name="roc-cache-persistence[{sbs}-aop,{sbs}-jdbc,ling.persistence]" type="JUnit" factoryName="JUnit">
     <module name="org.shaneking.roc.persistence"/>
     <extension name="coverage">
       <pattern>
@@ -239,7 +223,23 @@
       <option name="Make" enabled="true"/>
     </method>
   </configuration>
-  <configuration default="false" name="roc-cache-persistence-rr[roc.jackson]" type="JUnit" factoryName="JUnit">
+  <configuration default="false" name="roc-jackson[{sbs}-aop,ling.jackson]" type="JUnit" factoryName="JUnit">
+    <module name="org.shaneking.roc.jackson"/>
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="org.shaneking.roc.jackson.*"/>
+        <option name="ENABLED" value="true"/>
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="sktest"/>
+    <option name="MAIN_CLASS_NAME" value=""/>
+    <option name="METHOD_NAME" value=""/>
+    <option name="TEST_OBJECT" value="package"/>
+    <method v="2">
+      <option name="Make" enabled="true"/>
+    </method>
+  </configuration>
+  <configuration default="false" name="roc-jackson-cache-persistence-rr[ling.rr]" type="JUnit" factoryName="JUnit">
     <module name="org.shaneking.roc.rr"/>
     <extension name="coverage">
       <pattern>
@@ -259,7 +259,7 @@
       <option name="Make" enabled="true"/>
     </method>
   </configuration>
-  <configuration default="false" name="roc-zero" type="JUnit" factoryName="JUnit">
+  <configuration default="false" name="roc-zero[ling.zero]" type="JUnit" factoryName="JUnit">
     <module name="org.shaneking.roc.zero"/>
     <extension name="coverage">
       <pattern>
@@ -275,7 +275,7 @@
       <option name="Make" enabled="true"/>
     </method>
   </configuration>
-  <configuration default="false" name="leon-0test" type="JUnit" factoryName="JUnit">
+  <configuration default="false" name="leon-0test[roc.test]" type="JUnit" factoryName="JUnit">
     <module name="org.shaneking.leon.test"/>
     <extension name="coverage">
       <pattern>
@@ -291,7 +291,7 @@
       <option name="Make" enabled="true"/>
     </method>
   </configuration>
-  <configuration default="false" name="leon-persistence" type="JUnit" factoryName="JUnit">
+  <configuration default="false" name="leon-persistence[{sbs}-web,roc.rr]" type="JUnit" factoryName="JUnit">
     <module name="org.shaneking.leon.persistence"/>
     <extension name="coverage">
       <pattern>
@@ -307,7 +307,7 @@
       <option name="Make" enabled="true"/>
     </method>
   </configuration>
-  <configuration default="false" name="leon-rr" type="JUnit" factoryName="JUnit">
+  <configuration default="false" name="leon-rr[{sbs}-web,roc.rr]" type="JUnit" factoryName="JUnit">
     <module name="org.shaneking.leon.rr"/>
     <extension name="coverage">
       <pattern>
@@ -323,7 +323,7 @@
       <option name="Make" enabled="true"/>
     </method>
   </configuration>
-  <configuration default="false" name="leon-swagger(ling.zero)" type="JUnit" factoryName="JUnit">
+  <configuration default="false" name="leon-swagger[{sbs}-web,ling.zero]" type="JUnit" factoryName="JUnit">
     <module name="org.shaneking.leon.swagger"/>
     <extension name="coverage">
       <pattern>
