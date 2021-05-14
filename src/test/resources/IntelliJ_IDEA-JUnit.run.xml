@@ -1,20 +1,4 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="ling-struct[lombok]" type="JUnit" factoryName="JUnit">
-    <module name="org.shaneking.ling.struct"/>
-    <extension name="coverage">
-      <pattern>
-        <option name="PATTERN" value="org.shaneking.ling.struct.*"/>
-        <option name="ENABLED" value="true"/>
-      </pattern>
-    </extension>
-    <option name="PACKAGE_NAME" value="sktest"/>
-    <option name="MAIN_CLASS_NAME" value=""/>
-    <option name="METHOD_NAME" value=""/>
-    <option name="TEST_OBJECT" value="package"/>
-    <method v="2">
-      <option name="Make" enabled="true"/>
-    </method>
-  </configuration>
   <configuration default="false" name="ling-zero-0[lombok,slf4j-api]" type="JUnit" factoryName="JUnit">
     <module name="org.shaneking.ling.zero"/>
     <extension name="coverage">
@@ -36,22 +20,6 @@
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="org.shaneking.ling.test.*"/>
-        <option name="ENABLED" value="true"/>
-      </pattern>
-    </extension>
-    <option name="PACKAGE_NAME" value="sktest"/>
-    <option name="MAIN_CLASS_NAME" value=""/>
-    <option name="METHOD_NAME" value=""/>
-    <option name="TEST_OBJECT" value="package"/>
-    <method v="2">
-      <option name="Make" enabled="true"/>
-    </method>
-  </configuration>
-  <configuration default="false" name="ling-zero-cache" type="JUnit" factoryName="JUnit">
-    <module name="org.shaneking.ling.cache"/>
-    <extension name="coverage">
-      <pattern>
-        <option name="PATTERN" value="org.shaneking.ling.cache.*"/>
         <option name="ENABLED" value="true"/>
       </pattern>
     </extension>
@@ -175,54 +143,6 @@
       <option name="Make" enabled="true"/>
     </method>
   </configuration>
-  <configuration default="false" name="roc-cache-0[spring-tx,{sbs}-aop,caffeine,ling.zero]" type="JUnit" factoryName="JUnit">
-    <module name="org.shaneking.roc.cache"/>
-    <extension name="coverage">
-      <pattern>
-        <option name="PATTERN" value="org.shaneking.roc.cache.*"/>
-        <option name="ENABLED" value="true"/>
-      </pattern>
-    </extension>
-    <option name="PACKAGE_NAME" value="sktest"/>
-    <option name="MAIN_CLASS_NAME" value=""/>
-    <option name="METHOD_NAME" value=""/>
-    <option name="TEST_OBJECT" value="package"/>
-    <method v="2">
-      <option name="Make" enabled="true"/>
-    </method>
-  </configuration>
-  <configuration default="false" name="roc-cache-persistence-0[{sbs}-aop,{sbs}-jdbc,ling.persistence]" type="JUnit" factoryName="JUnit">
-    <module name="org.shaneking.roc.persistence"/>
-    <extension name="coverage">
-      <pattern>
-        <option name="PATTERN" value="org.shaneking.roc.persistence.*"/>
-        <option name="ENABLED" value="true"/>
-      </pattern>
-    </extension>
-    <option name="PACKAGE_NAME" value="sktest"/>
-    <option name="MAIN_CLASS_NAME" value=""/>
-    <option name="METHOD_NAME" value=""/>
-    <option name="TEST_OBJECT" value="package"/>
-    <method v="2">
-      <option name="Make" enabled="true"/>
-    </method>
-  </configuration>
-  <configuration default="false" name="roc-cache-persistence-hello" type="JUnit" factoryName="JUnit">
-    <module name="org.shaneking.roc.persistence.hello"/>
-    <extension name="coverage">
-      <pattern>
-        <option name="PATTERN" value="org.shaneking.roc.persistence.hello.*"/>
-        <option name="ENABLED" value="true"/>
-      </pattern>
-    </extension>
-    <option name="PACKAGE_NAME" value="sktest"/>
-    <option name="MAIN_CLASS_NAME" value=""/>
-    <option name="METHOD_NAME" value=""/>
-    <option name="TEST_OBJECT" value="package"/>
-    <method v="2">
-      <option name="Make" enabled="true"/>
-    </method>
-  </configuration>
   <configuration default="false" name="roc-jackson-0[{sbs}-aop,ling.jackson]" type="JUnit" factoryName="JUnit">
     <module name="org.shaneking.roc.jackson"/>
     <extension name="coverage">
@@ -259,11 +179,43 @@
       <option name="Make" enabled="true"/>
     </method>
   </configuration>
-  <configuration default="false" name="roc-zero[ling.zero]" type="JUnit" factoryName="JUnit">
+  <configuration default="false" name="roc-zero[spring-tx,{sbs}-aop,ling.zero]" type="JUnit" factoryName="JUnit">
     <module name="org.shaneking.roc.zero"/>
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="org.shaneking.roc.zero.*"/>
+        <option name="ENABLED" value="true"/>
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="sktest"/>
+    <option name="MAIN_CLASS_NAME" value=""/>
+    <option name="METHOD_NAME" value=""/>
+    <option name="TEST_OBJECT" value="package"/>
+    <method v="2">
+      <option name="Make" enabled="true"/>
+    </method>
+  </configuration>
+  <configuration default="false" name="roc-zero-persistence-0[{sbs}-jdbc,ling.persistence]" type="JUnit" factoryName="JUnit">
+    <module name="org.shaneking.roc.persistence"/>
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="org.shaneking.roc.persistence.*"/>
+        <option name="ENABLED" value="true"/>
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="sktest"/>
+    <option name="MAIN_CLASS_NAME" value=""/>
+    <option name="METHOD_NAME" value=""/>
+    <option name="TEST_OBJECT" value="package"/>
+    <method v="2">
+      <option name="Make" enabled="true"/>
+    </method>
+  </configuration>
+  <configuration default="false" name="roc-zero-persistence-hello" type="JUnit" factoryName="JUnit">
+    <module name="org.shaneking.roc.persistence.hello"/>
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="org.shaneking.roc.persistence.hello.*"/>
         <option name="ENABLED" value="true"/>
       </pattern>
     </extension>
