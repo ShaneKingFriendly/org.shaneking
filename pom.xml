@@ -10,7 +10,7 @@
 
   <groupId>org.shaneking</groupId>
   <artifactId>org.shaneking</artifactId>
-  <version>0.241.8.Friendly-SNAPSHOT</version>
+  <version>0.241.9.Friendly-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>org.shaneking</name>
@@ -92,6 +92,7 @@
 
   <properties>
     <!-- dependencies : updated 2021.1.7 -->
+    <com.alibaba_druid_version>1.2.6</com.alibaba_druid_version>
     <com.belerweb_pinyin4j_version>2.5.1</com.belerweb_pinyin4j_version>
     <com.github.jsqlparser_jsqlparser_version>4.0</com.github.jsqlparser_jsqlparser_version>
     <com.github.liaochong_myexcel_version>3.11.4</com.github.liaochong_myexcel_version>
@@ -109,7 +110,7 @@
     <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
   </properties>
 
-  <!-- mvn -N versions:set -DgenerateBackupPoms=false -DnewVersion=0.241.8.Friendly-SNAPSHOT -->
+  <!-- mvn -N versions:set -DgenerateBackupPoms=false -DnewVersion=0.241.9.Friendly-SNAPSHOT -->
   <modules>
     <module>../org.shaneking.ling</module>
     <module>../org.shaneking.roc</module>
@@ -119,6 +120,11 @@
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid</artifactId>
+        <version>${com.alibaba_druid_version}</version>
+      </dependency>
       <dependency>
         <groupId>com.belerweb</groupId>
         <artifactId>pinyin4j</artifactId>
