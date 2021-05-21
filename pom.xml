@@ -10,7 +10,7 @@
 
   <groupId>org.shaneking</groupId>
   <artifactId>org.shaneking</artifactId>
-  <version>0.241.9.Friendly-SNAPSHOT</version>
+  <version>0.241.10.Friendly-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>org.shaneking</name>
@@ -100,8 +100,8 @@
     <com.google.zxing_version>3.4.1</com.google.zxing_version>
     <commons-io_commons-io_version>2.8.0</commons-io_commons-io_version>
     <commons-net_commons-net_version>3.7.2</commons-net_commons-net_version>
-    <io.springfox_version>2.9.2</io.springfox_version>
-    <io.swagger_version>1.5.20</io.swagger_version>
+    <io.springfox_version>3.0.0</io.springfox_version>
+    <io.swagger_version>2.1.2</io.swagger_version>
     <!-- build plugins -->
     <org.jacoco_jacoco-maven-plugin_version>0.8.6</org.jacoco_jacoco-maven-plugin_version>
     <org.sonarsource.scanner.maven_sonar-maven-plugin_version>3.8.0.2131</org.sonarsource.scanner.maven_sonar-maven-plugin_version><!-- sonar:sonar -->
@@ -110,7 +110,7 @@
     <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
   </properties>
 
-  <!-- mvn -N versions:set -DgenerateBackupPoms=false -DnewVersion=0.241.9.Friendly-SNAPSHOT -->
+  <!-- mvn -N versions:set -DgenerateBackupPoms=false -DnewVersion=0.241.10.Friendly-SNAPSHOT -->
   <modules>
     <module>../org.shaneking.ling</module>
     <module>../org.shaneking.roc</module>
@@ -167,16 +167,11 @@
       </dependency>
       <dependency>
         <groupId>io.springfox</groupId>
-        <artifactId>springfox-swagger2</artifactId>
+        <artifactId>springfox-boot-starter</artifactId>
         <version>${io.springfox_version}</version>
       </dependency>
       <dependency>
-        <groupId>io.springfox</groupId>
-        <artifactId>springfox-swagger-ui</artifactId>
-        <version>${io.springfox_version}</version>
-      </dependency>
-      <dependency>
-        <groupId>io.swagger</groupId>
+        <groupId>io.swagger.core.v3</groupId>
         <artifactId>swagger-annotations</artifactId>
         <version>${io.swagger_version}</version>
       </dependency>
