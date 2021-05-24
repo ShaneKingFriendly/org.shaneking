@@ -115,7 +115,6 @@
     <module>../org.shaneking.ling</module>
     <module>../org.shaneking.roc</module>
     <module>../org.shaneking.leon</module>
-    <module>../org.shaneking.sunny</module>
   </modules>
 
   <dependencyManagement>
