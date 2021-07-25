@@ -10,7 +10,7 @@
 
   <groupId>org.shaneking</groupId>
   <artifactId>org.shaneking</artifactId>
-  <version>0.241.11.Friendly-SNAPSHOT</version>
+  <version>0.241.12.Friendly-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>org.shaneking</name>
@@ -109,7 +109,7 @@
     <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
   </properties>
 
-  <!-- mvn -N versions:set -DgenerateBackupPoms=false -DnewVersion=0.241.11.Friendly-SNAPSHOT -->
+  <!-- mvn -N versions:set -DgenerateBackupPoms=false -DnewVersion=0.241.12.Friendly-SNAPSHOT -->
   <modules>
     <module>../org.shaneking.ling</module>
     <module>../org.shaneking.roc</module>
