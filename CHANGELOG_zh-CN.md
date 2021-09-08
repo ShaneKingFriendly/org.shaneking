@@ -54,7 +54,7 @@ ShaneKingFriendly 是一套快速开发的 Java 框架（大家都这么说，�
   - 新增软删除`dd`：所有唯一索引需添加该属性，以便数据在业务上的可重复性，可重建性
 - rr
   - 新增需回滚异常`RbkRespException`：支持统一回滚
-  - 支持请求级别的防重放（新增`pri.ext.dsz`，含时区时间戳`yyyy-MM-dd HH:mm:ss.SSSXXX`）/异步（新增`pri.ext.async`，大于`0`表示开启异步并本次最长等待时间）
+  - 支持请求级别的防重放（新增`pri.ext.dsz`，含时区时间戳`yyyy-MM-dd HH:mm:ss.SSSXXX`，响应时更新）/异步（新增`pri.ext.async`，大于`0`表示开启异步并本次最长等待时间）/消息校验码（新增`pub.mvc`对密文校验，响应时更新）
 
 ## 0.241.2.Friendly
 
