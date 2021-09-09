@@ -43,7 +43,8 @@ ShaneKingFriendly 是一套快速开发的 Java 框架（大家都这么说，�
   - 重命名`OpenVisible`为`Shared`
 - rr
   - 请求级别的鉴权调整：支持平台级接口授权（系统越过租户，直接授权给渠道）
-  - `pub.tenantNo`改为`pri.ext.tenantNo`：防止关键数据被串改
+  - `pub.tenantNo`改为`pri.ext.tenantNo`：防止关键数据被篡改
+  - 请求级别的审计调整：默认`异步`（原`同步`）插请求响应日志表
 
 ### Features
 
