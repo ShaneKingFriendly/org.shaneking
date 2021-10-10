@@ -10,7 +10,7 @@
 
   <groupId>org.shaneking</groupId>
   <artifactId>org.shaneking</artifactId>
-  <version>0.254.10.Friendly-SNAPSHOT</version>
+  <version>0.254.10.Friendly</version>
   <packaging>pom</packaging>
 
   <name>org.shaneking</name>
@@ -104,7 +104,7 @@
     <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
   </properties>
 
-  <!-- mvn -N versions:set -DgenerateBackupPoms=false -DnewVersion=0.254.10.Friendly-SNAPSHOT -->
+  <!-- mvn -N versions:set -DgenerateBackupPoms=false -DnewVersion=0.254.10.Friendly -->
   <modules>
     <module>../org.shaneking.ling</module>
     <module>../org.shaneking.roc</module>
@@ -207,7 +207,6 @@
             </executions>
           </plugin>
           <!-- Javadoc -->
-          <!--
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-javadoc-plugin</artifactId>
@@ -220,7 +219,6 @@
               </execution>
             </executions>
           </plugin>
-          -->
           <!-- Source -->
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
