@@ -5,12 +5,12 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.5.4</version>
+    <version>2.5.5</version>
   </parent>
 
   <groupId>org.shaneking</groupId>
   <artifactId>org.shaneking</artifactId>
-  <version>0.254.20.Friendly-SNAPSHOT</version>
+  <version>0.255.10.Friendly-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>org.shaneking</name>
@@ -92,10 +92,10 @@
 
   <properties>
     <!-- dependencies : updated 2021.9.5 -->
-    <com.github.jsqlparser_jsqlparser_version>4.1</com.github.jsqlparser_jsqlparser_version>
-    <com.github.liaochong_myexcel_version>3.11.4</com.github.liaochong_myexcel_version>
+    <com.github.jsqlparser_jsqlparser_version>4.2</com.github.jsqlparser_jsqlparser_version>
+    <com.github.liaochong_myexcel_version>3.11.7</com.github.liaochong_myexcel_version>
     <io.springfox_version>3.0.0</io.springfox_version>
-    <io.swagger_version>2.1.10</io.swagger_version>
+    <io.swagger.core.v3_version>2.1.11</io.swagger.core.v3_version>
     <!-- build plugins -->
     <org.jacoco_jacoco-maven-plugin_version>0.8.7</org.jacoco_jacoco-maven-plugin_version>
     <org.sonarsource.scanner.maven_sonar-maven-plugin_version>3.9.0.2155</org.sonarsource.scanner.maven_sonar-maven-plugin_version><!-- sonar:sonar -->
@@ -104,7 +104,7 @@
     <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
   </properties>
 
-  <!-- mvn -N versions:set -DgenerateBackupPoms=false -DnewVersion=0.254.20.Friendly-SNAPSHOT -->
+  <!-- mvn -N versions:set -DgenerateBackupPoms=false -DnewVersion=0.255.10.Friendly-SNAPSHOT -->
   <modules>
     <module>../org.shaneking.ling</module>
     <module>../org.shaneking.roc</module>
@@ -132,7 +132,7 @@
       <dependency>
         <groupId>io.swagger.core.v3</groupId>
         <artifactId>swagger-annotations</artifactId>
-        <version>${io.swagger_version}</version>
+        <version>${io.swagger.core.v3_version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
