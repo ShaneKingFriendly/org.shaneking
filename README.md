@@ -1,12 +1,17 @@
 # org.shaneking
+
 ShaneKing Java Library
 
 ## Specification
+
 ### Package
+
 #### Process Flow Layer
+
 the layers like car, A classes, B classes, C classes, A0 classes, A1 classes, A00 classes(WuLingHongGuang MINI EV)
 
 ##### Process Flow
+
 - AbCdE`f`GhI`j`KlM`n`OpQ`r`StU`v`WxYz
   - @Controller -> @Service -> @Repository
   - b -> d -> f -> ... -> v -> x -> z
@@ -15,6 +20,7 @@ the layers like car, A classes, B classes, C classes, A0 classes, A1 classes, A0
   - 6 Helper(@Component), 8 Utils(Statics)
 
 ##### Layer
+
 - stub(no dependency): used for caller. Dicts, Constants, ErrorCodes etc.
   - bean: XxxBean, XxxHt2pBean, XxxCloudBean, XxxDubboBean
   - kafka: Kafka Message Body Struct
@@ -37,7 +43,9 @@ the layers like car, A classes, B classes, C classes, A0 classes, A1 classes, A0
   - END
 
 ### Class
+
 #### Order
+
 - field (excluding serialized objects like ORM entitys)
   - static -> non-static
   - final -> non-final
@@ -55,12 +63,16 @@ the layers like car, A classes, B classes, C classes, A0 classes, A1 classes, A0
   - arg value (by ascii: special -> symbol -> 0-9 -> A-Z -> a-z)
 
 ### Annotation
+
 #### Order
+
 - RR : 12345
 - Transactional : 123456
 
 ### Method
+
 #### Special Getter/Setter Method Name Prefix
+
 - **gna**: get null able
 - **gnn**: get not null
 - **sin**: set if null

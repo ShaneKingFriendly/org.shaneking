@@ -9,7 +9,8 @@
       <charset>UTF-8</charset>
     </encoder>
   </appender>
-  <appender name="CONSOLE_ASYNC" class="ch.qos.logback.classic.AsyncAppender"><!-- http://logback.qos.ch/manual/appenders.html#AsyncAppender -->
+  <!-- http://logback.qos.ch/manual/appenders.html#AsyncAppender -->
+  <appender name="CONSOLE_ASYNC" class="ch.qos.logback.classic.AsyncAppender">
     <discardingThreshold>0</discardingThreshold>
     <queueSize>256</queueSize>
     <appender-ref ref="CONSOLE"/>
@@ -21,7 +22,8 @@
     </encoder>
     <file>${sklog.path}/${sklog.prefix}.log</file>
     <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-      <fileNamePattern>${sklog.path}/${sklog.prefix}.%d{yyyy-MM-dd}.%i.log</fileNamePattern><!-- Rolling Policy: By Date By Size -->
+      <!-- Rolling Policy: By Date By Size -->
+      <fileNamePattern>${sklog.path}/${sklog.prefix}.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
       <maxFileSize>100MB</maxFileSize>
       <maxHistory>32</maxHistory><!-- Day -->
       <totalSizeCap>5GB</totalSizeCap>
@@ -45,7 +47,8 @@
     </encoder>
     <file>${sklog.path}/${sklog.prefix}.xxx.log</file>
     <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-      <fileNamePattern>${sklog.path}/${sklog.prefix}.xxx.%d{yyyy-MM-dd}.%i.log</fileNamePattern><!-- Rolling Policy: By Date By Size -->
+      <!-- Rolling Policy: By Date By Size -->
+      <fileNamePattern>${sklog.path}/${sklog.prefix}.xxx.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
       <maxFileSize>100MB</maxFileSize>
       <maxHistory>32</maxHistory><!-- Day -->
       <totalSizeCap>5GB</totalSizeCap>
@@ -56,7 +59,8 @@
     <queueSize>256</queueSize>
     <appender-ref ref="SPECIAL_PACKAGE_FILE"/>
   </appender>
-  <logger name="org.shaneking.xxx" level="DEBUG" additifiltervity="false"><!-- additifiltervity=false : the org.shaneking.xxx log just output to this logger -->
+  <!-- additifiltervity=false : the org.shaneking.xxx log just output to this logger -->
+  <logger name="org.shaneking.xxx" level="DEBUG" additifiltervity="false">
     <appender-ref ref="SPECIAL_PACKAGE_FILE_ASYNC"/>
   </logger>
 
@@ -73,7 +77,8 @@
       <onMismatch>DENY</onMismatch>
     </filter>
     <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-      <fileNamePattern>${sklog.path}/${sklog.prefix}.yyy.%d{yyyy-MM-dd}.%i.log</fileNamePattern><!-- Rolling Policy: By Date By Size -->
+      <!-- Rolling Policy: By Date By Size -->
+      <fileNamePattern>${sklog.path}/${sklog.prefix}.yyy.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
       <maxFileSize>100MB</maxFileSize>
       <maxHistory>32</maxHistory><!-- Day -->
       <totalSizeCap>5GB</totalSizeCap>

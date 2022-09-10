@@ -10,7 +10,7 @@
 
   <groupId>org.shaneking</groupId>
   <artifactId>org.shaneking</artifactId>
-  <version>0.255.10.Friendly-SNAPSHOT</version>
+  <version>0.255.11.Friendly-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>org.shaneking</name>
@@ -98,8 +98,11 @@
     <io.swagger.core.v3_version>2.1.11</io.swagger.core.v3_version>
     <!-- build plugins -->
     <org.jacoco_jacoco-maven-plugin_version>0.8.7</org.jacoco_jacoco-maven-plugin_version>
-    <org.sonarsource.scanner.maven_sonar-maven-plugin_version>3.9.0.2155</org.sonarsource.scanner.maven_sonar-maven-plugin_version><!-- sonar:sonar -->
-    <sh.tak.appbundler_appbundle-maven-plugin_version>1.2.0</sh.tak.appbundler_appbundle-maven-plugin_version><!-- g2048 -->
+    <!-- sonar:sonar -->
+    <org.sonarsource.scanner.maven_sonar-maven-plugin_version>3.9.0.2155
+    </org.sonarsource.scanner.maven_sonar-maven-plugin_version>
+    <!-- g2048 -->
+    <sh.tak.appbundler_appbundle-maven-plugin_version>1.2.0</sh.tak.appbundler_appbundle-maven-plugin_version>
     <!-- profile plugins -->
     <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
   </properties>
@@ -162,7 +165,8 @@
           <version>${org.jacoco_jacoco-maven-plugin_version}</version>
           <executions>
             <execution>
-              <id>default-prepare-agent</id><!--'build.pluginManagement.plugins.plugin[org.jacoco:jacoco-maven-plugin].executions.execution.id' must be unique but found duplicate execution with id default-->
+              <!--'build.pluginManagement.plugins.plugin[org.jacoco:jacoco-maven-plugin].executions.execution.id' must be unique but found duplicate execution with id default-->
+              <id>default-prepare-agent</id>
               <goals>
                 <goal>prepare-agent</goal>
               </goals>
