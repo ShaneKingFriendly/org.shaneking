@@ -11,6 +11,8 @@
   </appender>
   <!-- http://logback.qos.ch/manual/appenders.html#AsyncAppender -->
   <appender name="CONSOLE_ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+    <!--show line number-->
+    <includeCallerData>true</includeCallerData>
     <discardingThreshold>0</discardingThreshold>
     <queueSize>256</queueSize>
     <appender-ref ref="CONSOLE"/>
@@ -30,6 +32,8 @@
     </rollingPolicy>
   </appender>
   <appender name="FILE_ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+    <!--show line number-->
+    <includeCallerData>true</includeCallerData>
     <discardingThreshold>0</discardingThreshold>
     <queueSize>256</queueSize>
     <appender-ref ref="FILE"/>
@@ -55,6 +59,8 @@
     </rollingPolicy>
   </appender>
   <appender name="SPECIAL_PACKAGE_FILE_ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+    <!--show line number-->
+    <includeCallerData>true</includeCallerData>
     <discardingThreshold>0</discardingThreshold>
     <queueSize>256</queueSize>
     <appender-ref ref="SPECIAL_PACKAGE_FILE"/>
@@ -85,6 +91,8 @@
     </rollingPolicy>
   </appender>
   <appender name="JUST_ERROR_FILE_ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+    <!--show line number-->
+    <includeCallerData>true</includeCallerData>
     <discardingThreshold>0</discardingThreshold>
     <queueSize>256</queueSize>
     <appender-ref ref="JUST_ERROR_FILE"/>

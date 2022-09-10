@@ -10,7 +10,7 @@
 
   <groupId>org.shaneking</groupId>
   <artifactId>org.shaneking</artifactId>
-  <version>0.255.11.Friendly-SNAPSHOT</version>
+  <version>0.255.13.Friendly-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>org.shaneking</name>
