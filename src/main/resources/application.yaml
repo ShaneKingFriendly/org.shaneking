@@ -1,0 +1,80 @@
+## sk config class
+#sk.roc.zero.net.address
+#sk.leon.swagger.ui
+
+## sk config property default
+sk:
+  roc:
+    persistence:
+      dao:
+        cache:
+          seconds: 180
+      entity:
+        cache:
+          enabled: true
+      simple:
+        entity:
+          enabled: false
+    rr:
+      async:
+        enabled: true
+      audit:
+        async: true
+        enabled: true
+      cache:
+        enabled: true
+      channel:
+        enabled: true
+      crypto:
+        enabled: true
+      dsz:
+        enabled: true
+      limiting:
+        enabled: true
+      tenant:
+        enabled: true
+      user:
+        enabled: true
+    zero:
+      cache:
+        transactional:
+          enabled: true
+      simple:
+        cache:
+          enabled: false
+  leon:
+    persistence:
+      dbserver:
+        backup:
+          folder: /tmp
+      file:
+        cvs:
+          buffer: 1023
+        temporary:
+          folder: /tmp
+    rr:
+      audit:
+        enabled: true
+      controller:
+        advice:
+          enabled: true
+      file:
+        attach:
+          folder: /tmp
+        temporary:
+          folder: /tmp
+        upload:
+          folder: /tmp
+      req:
+        ips:
+          enabled: true
+        url:
+          enabled: true
+
+## spring
+spring:
+  jackson:
+    default-property-inclusion: non_null
+    deserialization:
+      fail_on_unknown_properties: false
+
